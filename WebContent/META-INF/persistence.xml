@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns="http://java.sun.com/xml/ns/persistence ">
+	<persistence-unit name="localisation" transaction-type="RESOURCE_LOCAL">
+	
+		<provider>org.hibernate.ejb.HibernatePersistence</provider>
+		
+		<class>gestrh.model.Employes</class>
+		<class>gestrh.model.Metiers</class>
+		<class>gestrh.model.Postes</class>
+		<class>gestrh.model.Carrieres</class>
+		<class>gestrh.model.Competences</class>
+		<class>gestrh.model.Evaluations</class>
+		<class>gestrh.model.Formations</class>
+		<class>gestrh.model.Sessions</class>
+		<class>gestrh.model.Plans</class>
+		<class>gestrh.model.Inscrits</class>
+		
+	    <properties>
+			<property name="hibernate.dialect" value="org.hibernate.dialect.OracleDialect"/>
+			<property name="hibernate.connection.driver_class" value="oracle.jdbc.driver.OracleDriver"/>
+			<property name="hibernate.connection.username" value="sysdba"/>
+			<property name="hibernate.connection.password" value="root"/>
+			<property name="hibernate.connection.url" value="jdbc:-Oracle:thin:@localhost:5500:MaBase"/>
+			<property name="hibernate.max_fetch_depth" value="3"/>
+		</properties>
+		
+	</persistence-unit>
+</persistence> 
